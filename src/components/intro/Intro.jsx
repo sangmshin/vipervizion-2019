@@ -1,7 +1,8 @@
-import React, { Suspense, lazy, Component, Fragment, createContext, createRef } from 'react';
-import { Button, Grid, Row, Col, Navbar, Nav, NavItem, Image, Thumbnail } from 'react-bootstrap'
+import React, { Component } from 'react';
+import {  Grid, Row, Col, Image } from 'react-bootstrap'
 import "./Intro.scss";
-import {TweenMax} from 'gsap';
+import ss_logo from '../../img/ss-logo_blk.png';
+import { TweenMax } from 'gsap';
 const t = TweenMax
 
 class Intro extends Component{
@@ -34,6 +35,7 @@ class Intro extends Component{
       <Grid id='intro'>
         <Row>
           <Col className='text-center'>
+            <Image src={ss_logo} width={150} className='ss-logo__intro'></Image>
             <p className='intro__title_top'>Hello, my name is Sang Shin</p>
             <p className='intro__title_bottom'>(I'm) => Javascript Full Stack Developer from New York</p>
           </Col>
@@ -47,4 +49,5 @@ class Intro extends Component{
     )
   }
 }
+
 export default Intro;
