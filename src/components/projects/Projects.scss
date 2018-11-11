@@ -1,0 +1,53 @@
+#projects {
+  max-width: 2400px;
+
+  .spinner{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .proj {
+    width: 100%;
+    height: 100vh;
+
+    .proj-desc {
+      padding-left: 40px;
+    }
+
+    .github-button {
+      margin-top: 20px;
+    }
+
+    .visit-site {
+      margin-top: 20px;
+    }
+
+    &:last-child {}
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:1500px) {
+  .proj {
+    .proj-desc {}
+  }
+}
+
+@media (max-width: 991px) {
+  .proj {
+    height: 100%!important;
+    margin-top: 100px!important;
+    margin-bottom: 100px!important;
+
+    .proj-desc{
+      margin-top: 2vw;
+      padding-left: 9vw!important;
+      padding-right: 9vw;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-react-dj.png",
+    "title":"Dow Jones: Data Driven Business",
+    "description":"Landing page for Dow Jones",
+    "feature":[
+      "The most reliable source", 
+      "The most reliable source"
+    ],
+    "lang":["React.js", "ES6", "HTML5", "CSS3"],
+    "module":"",
+    "role":"Front-End Development",
+    "links": {
+      "url":"http://go.dowjones.com/data-driven-rx/",
+      "github":"https://github.com/sangmshin/dj-marketing/tree/DM-3036/2018"
+    }
+  },
+
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-aitoday.png",
+    "title":"A.I. Today",
+    "description":"AI Today app is not a simple weather app. There are multiple features. This app lets you know: the most reliable and recent news about A.I . whether the news is positive or not. ",
+    "feature":[
+      "Weather the news is fake or not", 
+      "Weather the news is fake or not"
+    ],
+    "lang":["Node.js", "Express.js", "Handlebars.js"],
+    "module":["sentiment analysis", "feedparser (for news feeds)"],
+    "role":"Front-End and Back-End development Lead",
+    "links": {
+      "url":"http://aitodayapp-env.dzemrkmyie.us-east-2.elasticbeanstalk.com/",
+      "github":"https://github.com/sangmshin/ai-today"
+    }
+  }
+]
