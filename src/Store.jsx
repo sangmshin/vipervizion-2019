@@ -1,8 +1,8 @@
-import React, { Suspense, lazy, Component, Fragment, createContext, createRef } from 'react';
-import axios from 'axios';
+import React, { Component, createContext } from 'react';
+// import axios from 'axios';
 import data from './data/data.json';
 const Context = createContext();
-const { Provider, Consumer } = Context
+const { Provider, } = Context
 
 // const data_url = 'https://s3.amazonaws.com/sangminshin/vipervizion-2019/data/data.json'
 

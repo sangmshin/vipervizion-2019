@@ -1,35 +1,134 @@
 [
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-react-dj.png",
-    "title":"Dow Jones: Data Driven Business",
-    "description":"Landing page for Dow Jones",
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-aitoday.png",
+    "title":"A.I. Today",
+    "description":"A.I. Today app is not a simple news/weather app. I wanted to create an A.I. experience with users by adding emotion and conscience to this app.",
     "feature":[
-      "The most reliable source", 
-      "The most reliable source"
+      "The most reliable and up-to-date news about A.I.", 
+      "Lets you know whether the news is good or bad using Sentiment Analysis",
+      "Current weather all around the world",
+      "Lets you know whether the weather is good or bad based on historic weather temperature in the same location and weather condition"
     ],
-    "lang":["React.js", "ES6", "HTML5", "CSS3"],
+    "lang":[ "Node.js", "Express.js", "ES6 & Beyond", "Handlebars.js", "Deploy: AWS Elastic Beanstalk" ],
+    "module":["sentiment analysis", "feedparser (for news feeds)"],
+    "role":"Front-End & Back-End Development Lead",
+    "links": {
+      "url":"http://aitodayapp-env.dzemrkmyie.us-east-2.elasticbeanstalk.com/",
+      "github":"https://github.com/sangmshin/ai-today"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-wp-edu.png",
+    "title":"WSJ Education",
+    "description":"The Wall Street Journal's new look Education site for college students and college professors.",
+    "lang":[ "HTML5", "PHP", "Sass", "jQuery", "Gulp.js", "Bootstrap 3" ],
+    "role":"Front-End Development Lead & Back-End management",
+    "links": {
+      "url":"https://education.wsj.com/",
+      "github":"https://github.com/sangmshin/wsj/tree/WSJM-3310"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-react-dj.png",
+    "title":"Dow Jones DNA: Data-Driven Business",
+    "description":"Landing page created for Dow Jones DNA with completely controlled form components in React.js.",
+    "lang":[ "React.js", "ES6", "HTML5", "CSS3" ],
     "module":"",
     "role":"Front-End Development",
     "links": {
       "url":"http://go.dowjones.com/data-driven-rx/",
-      "github":"https://github.com/sangmshin/dj-marketing/tree/DM-3036/2018"
+      "github":"https://github.com/sangmshin/dj-marketing/tree/DM-3036"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-vv.png",
+    "title":"Vipervizion v.2019 ",
+    "description":"Single-Page App (SPA) for my portfolio written in React.js v.16.6",
+    "feature":[
+      "React 16.6's lazy & Suspense"
+    ],
+    "lang":[ "React.js", "ES6 & Beyond", "Node.js", "Express.js",  "GSAP", "Sass", "Deploy: AWS Elastic Beanstalk" ],
+    "module":"",
+    "role":"Javascript Full-Stack Development",
+    "links": {
+      "url":"",
+      "github":"https://github.com/sangmshin/vipervizion-2019"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-alexa-hc.png",
+    "title":"Holiday Chill",
+    "description":"Deutsch Inc. asked me to build Amazon's Alexa app for holiday season to give out Echo Dots to their clients and employees. I created several prototypes prior to build this public skill. It was very challenging since Alexa SDK was new (then and still) and there was not enough/solid documents but thanks to my favorite language, `Node.js` which helped me write back-end successfully. One month later, the same app was published in Google Assistant for Google Home device.",
+    "feature":[
+      "Meditation with Jack Frost for about 20 min", 
+      "Listen to the sound of winter for relaxation and stress-free time"
+    ],
+    "lang":[ "ES6 & Beyond", "Node.js", "Alexa SDK", "Deploy: AWS Lambda", "Firebase", "Dialogflow", "Deploy: Actions on Google" ],
+    "module":"",
+    "role":"Back-End Development Lead",
+    "links": {
+      "url":"https://theholidaychill.com/",
+      "github":"https://github.com/sangmshin/holidaychill_google",
+      "github2":"https://github.com/sangmshin/holidaychill",
+      "google":"https://assistant.google.com/services/a/uid/000000c8301b30fd?hl=en",
+      "amazon":"https://www.amazon.com/Deutsch-Inc-Holiday-Chill/dp/B077YYFGSS/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1541964318&sr=1-1&keywords=holiday+chill"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-alexa-paintbot.png",
+    "title":"HGTV Valspar Paint",
+    "description":"Created an Amazon's Alexa skill for HGTV+Valspar Paint pitch purpose. This skill is mainly designed for Echo Show device with Node.js & Alexa SDK that includes many user interactive features.",
+    "feature":[
+      "Voice command to help you choose the right paint product for you", 
+      "Swippable image gallery", 
+      "Google Map integration"
+    ],
+    "lang":[ "Node.js", "Alexa SDK", "ES6", "Deploy: AWS Lambda" ],
+    "module":"",
+    "role":"Back-End Development lead",
+    "links": {
+      "video":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/video/valspar.mp4",
+      "github":"https://github.com/sangmshin/alexa_valspar_paintbot"
     }
   },
 
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-aitoday.png",
-    "title":"A.I. Today",
-    "description":"AI Today app is not a simple weather app. There are multiple features. This app lets you know: the most reliable and recent news about A.I . whether the news is positive or not. ",
-    "feature":[
-      "Weather the news is fake or not", 
-      "Weather the news is fake or not"
-    ],
-    "lang":["Node.js", "Express.js", "Handlebars.js"],
-    "module":["sentiment analysis", "feedparser (for news feeds)"],
-    "role":"Front-End and Back-End development Lead",
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-shoppage-barrons.png",
+    "title":"Barron's Shop Page",
+    "description":"One of Dow Jones & Company's weekly newspaper/magazine, Barron's online shop page to provide print and digital copy. ",
+    "feature":"",
+    "lang":[ "HTML5", "jQuery", "CSS3" ],
+    "role":"Front-End Development",
     "links": {
-      "url":"http://aitodayapp-env.dzemrkmyie.us-east-2.elasticbeanstalk.com/",
-      "github":"https://github.com/sangmshin/ai-today"
+      "url":"https://buy.barrons.com/barusnov18",
+      "github":"https://github.com/sangmshin/mgm/tree/MGM-924"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-wp-foe.png",
+    "title":"WSJ Future of Everything Festival 2018",
+    "description":"The Wall Street Journal's annual festival site built in WordPress.",
+    "feature":"",
+    "lang":[ "PHP", "WordPress", "HTML5", "Sass", "jQuery", "Gulp.js"],
+    "module":"",
+    "role":"Front-End & Back-End Development",
+    "links": {
+      "url":"https://foefestival.wsj.com/",
+      "github":"https://github.com/sangmshin/wsj/tree/WSJM-3991"
+    }
+  },
+
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-lp-holiday.png",
+    "title":"Holiday Chill Landing Page",
+    "description":"Landing page that describes how to install, enable and use Alexa app, Holiday Chill created by Deutsch Inc.",
+    "feature":"",
+    "lang":[ "HTML5", "Sass", "jQuery", "Bootstrap 3", "Gulp.js", "Parallax.js" ],
+    "module":"",
+    "role":"Front-End Development Lead",
+    "links": {
+      "url":"https://theholidaychill.com/",
+      "github":"https://github.com/sangmshin/holidaychill-landingpage"
     }
   }
 ]

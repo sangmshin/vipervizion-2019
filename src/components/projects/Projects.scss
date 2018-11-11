@@ -1,7 +1,7 @@
 #projects {
   max-width: 2400px;
 
-  .spinner{
+  .spinner {
     width: 100%;
     margin: 20px auto;
     display: flex;
@@ -11,11 +11,29 @@
   }
 
   .proj {
-    width: 100%;
+    // width: 100%;
     height: 100vh;
 
     .proj-desc {
       padding-left: 40px;
+
+      li {
+        padding-bottom: 10px;
+      }
+      .github-button{
+        a {
+          margin-right: 10px;
+        }
+      }
+
+      .visit-buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > div {
+          margin-right: 10px;
+        }
+      }
     }
 
     .github-button {
@@ -27,6 +45,7 @@
     }
 
     &:last-child {}
+
     margin-top: 40px;
     margin-bottom: 40px;
   }
@@ -40,13 +59,13 @@
 
 @media (max-width: 991px) {
   .proj {
-    height: 100%!important;
-    margin-top: 100px!important;
-    margin-bottom: 100px!important;
+    height: 100% !important;
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
 
-    .proj-desc{
+    .proj-desc {
       margin-top: 2vw;
-      padding-left: 9vw!important;
+      padding-left: 9vw !important;
       padding-right: 9vw;
     }
   }
