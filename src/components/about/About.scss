@@ -1,0 +1,54 @@
+$b-xs: 768px; // BELOW 768
+$b-sm: 768px; // BIGGER THAN 768
+$b-md: 992px; // BIGGER THAN 992
+$b-lg: 1200px; // BIGGER THAN 1200
+
+#about {
+
+  padding-left: 60px;
+  padding-right: 60px;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .about__title_top {
+    font-size: 40px;
+  }
+
+  .about__title_bottom {
+    font-size: 23px;
+    line-height: 39px;
+  }
+  .resume-button{
+    margin-top: 30px;
+    &:last-child{
+      a{
+        margin-right: 2px;
+        margin-left: 2px;
+      }
+    }
+  }
+  .btn-warning {
+    transition: all .3s ease-out;
+    color: #fff;
+    background-color: #ef8354;
+    border-color: #ef8354;
+    &:hover{
+      color: #ef8354;
+      background-color: #fff;
+      border-color: #ef8354;
+    }
+  }
+
+}
+
+@media(max-width:$b-xs){
+  .about__title_bottom {
+    font-size: 18px!important;
+    line-height: 30px!important;
+  }
+}
+

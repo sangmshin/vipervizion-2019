@@ -92,10 +92,6 @@ const Proj =({projects})=>
             }
           </div>
 
-          {/* {
-            projects.links.github
-          } */}
-
           <div className='visit-buttons'>
             { AddButton(projects.links.url, 'VISIT SITE') }
             { AddButton(projects.links.amazon, 'VISIT AMAZON STORE') }
