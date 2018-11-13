@@ -13,7 +13,7 @@
     "module":["sentiment analysis", "feedparser (for news feeds)"],
     "role":"Front-End & Back-End Development Lead",
     "links": {
-      "url":"http://aitodayapp-env.dzemrkmyie.us-east-2.elasticbeanstalk.com/",
+      "url":"http://ai-today.us-east-1.elasticbeanstalk.com/",
       "github":"https://github.com/sangmshin/ai-today"
     }
   },

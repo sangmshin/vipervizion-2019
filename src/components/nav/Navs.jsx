@@ -1,11 +1,13 @@
 import React, { Suspense, lazy, Component, Fragment, createContext, createRef } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect, Prompt, withRouter } from 'react-router-dom';
 import { Button, Grid, Row, Col, Navbar, Nav, NavItem, Image, Thumbnail } from 'react-bootstrap'
-import { TweenMax, TimelineMax } from "gsap";
-
+import { TweenMax } from "gsap";
 import ss_logo from '../../img/ss-logo_white.png';
 import $ from "jquery";
 import './Navs.scss';
+import { Context } from "../../Store";
+const { Consumer } = Context;
+
 
 const t = TweenMax
 
@@ -14,15 +16,16 @@ class Navs extends Component{
   constructor(props){
     super(props)
     this.state = {
-     isExpanded: false
+     isExpanded: false,
+    //  isVisible: false
     }
   }
 
+  
+
   // NAV ONCLICK EVENTS
   handleActiveKey = (selectedKey)=>{
-    // var offset= $(window).offset().top;
-    // t.to(window, 1, {scrollTo:{y:offset}});
-    // window.scrollTo(0, 0);
+    
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 
     $('#navItems li').removeClass('active')
@@ -57,6 +60,7 @@ class Navs extends Component{
 
   componentDidMount () {
     window.addEventListener('resize', this.onWindowResize);
+    // window.addEventListener('scroll', this.onScroll);
   }
 
 
@@ -91,6 +95,7 @@ class Navs extends Component{
             
           </Navbar.Collapse>
         </Navbar>
+        
       </Fragment>
     )
   }

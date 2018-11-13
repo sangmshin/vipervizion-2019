@@ -21,6 +21,22 @@
 
 }
 
+.projects-nav {
+  position: fixed;
+  z-index: 1000;
+  margin-left: 1%;
+
+  &>div {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    a{
+    }
+  }
+}
+
+
 @media(max-width:768px) {
 
   .navbar-inverse .navbar-nav>.active>a,
@@ -30,6 +46,9 @@
     color: #fff;
     background-color: #080808;
     text-align: center;
+  }
+  .projects-nav {
+    margin-left: 0px;
   }
 }
 

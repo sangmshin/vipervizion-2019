@@ -16,7 +16,7 @@ const Contact =()=>
         </Col>
       </Row>  
       <Row className="arrow">
-        <Col>
+        <Col className='text-center'>
           <p>Please send an email to <a href="mailto:sangminshin@mail.com" target="_blank" rel="noopener noreferrer" style={{color:'#ef8354'}}>sangminshin@mail.com</a> and ~let's talk.</p>
         </Col>
         {/* <ContactForm/> */}

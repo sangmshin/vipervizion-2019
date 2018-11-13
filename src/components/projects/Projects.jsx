@@ -20,9 +20,14 @@ class Projects extends Component{
     return (
       <>
           <Grid fluid id='projects'>
+            <Row>
+              <Col>
+                <h1 className='projects__title text-center'>MY PROJECTS</h1>
+              </Col>
+            </Row>
             <Consumer>
                 {value=>
-                  value.projects.map( proj =>
+                  value.projects.map( (proj, index) =>
                     <Suspense fallback={
                       <div className='spinner'>
                         <DotLoader
@@ -33,7 +38,7 @@ class Projects extends Component{
                         />
                       </div>
                     }>
-                      <SingleProject key={proj.title} projects={proj}/>
+                      <SingleProject key={proj.title} projects={proj} id={index}/>
                     </Suspense>
                   )
                 }

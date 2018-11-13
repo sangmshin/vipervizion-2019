@@ -5,10 +5,12 @@ import './App.scss';
 
 import { Store, Context } from './Store'
 import Navs from './components/nav/Navs';
+import ProjNavs from './components/nav/ProjNavs';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
+import Footer from './components/footer/Footer';
 
 class App extends Component {
   render() {
@@ -16,6 +18,7 @@ class App extends Component {
       <Router>
         <Store>
           <Navs/>
+          <ProjNavs/>
           <Switch>
             <Route exact={true} path='/' component={Home} />
             <Route path='/projects' component={Projects} />
@@ -23,8 +26,7 @@ class App extends Component {
             <Route path='/contact' component={Contact} />
           </Switch>  
 
-          {/* <Intro/>
-          <Projects/> */}
+          <Footer></Footer>
         </Store>
       </Router>
     );

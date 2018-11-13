@@ -24,7 +24,7 @@ class Intro extends Component{
   }
 
   onScroll =()=> {
-    console.log('scrolling. window-pageYoffSet', window.pageYOffset);
+    // console.log('scrolling. window-pageYoffSet', window.pageYOffset);
     t.to(this.arrow, .5, {alpha:0})
   }
 

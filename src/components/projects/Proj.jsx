@@ -48,9 +48,9 @@ function AddButton(_link, _nameOfButton){
   )
 }
 
-const Proj =({projects})=>
+const Proj =({projects, id})=>
   <>
-    <Row className='proj'>
+    <Row id={id} className='proj'>
       <Col xs={12} sm={12} md={6} lg={6} className='v-center'>
         <img src={projects.main_img} alt="mockup" className='img-responsive'/>
       </Col>
