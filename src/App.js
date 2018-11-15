@@ -5,7 +5,7 @@ import './App.scss';
 
 import { Store, Context } from './Store'
 import Navs from './components/nav/Navs';
-import ProjNavs from './components/nav/ProjNavs';
+// import ProjNavs from './components/nav/ProjNavs';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
@@ -18,7 +18,7 @@ class App extends Component {
       <Router>
         <Store>
           <Navs/>
-          <ProjNavs/>
+          {/* <ProjNavs/> */}
           <Switch>
             <Route exact={true} path='/' component={Home} />
             <Route path='/projects' component={Projects} />

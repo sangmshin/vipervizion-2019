@@ -3,8 +3,10 @@ import { Button, Grid, Row, Col, Navbar, Nav, NavItem, Image, Thumbnail } from '
 import { css } from 'react-emotion';
 import { DotLoader } from 'react-spinners';
 // import Proj from "./Proj";
+import ProjNavs from '../nav/ProjNavs';
 import './Projects.scss';
 import { Context } from "../../Store";
+// import ProjNavs from '../nav/ProjNavs';
 const { Consumer } = Context;
 
 const SingleProject = lazy(()=>import('./Proj'))
@@ -16,9 +18,15 @@ class Projects extends Component{
      loading: true
     }
   }
+
+  componentWillUnmount(){
+    console.log('I am unmounted');
+  }
+
   render(){
     return (
       <>
+      <ProjNavs/>
           <Grid fluid id='projects'>
             <Row>
               <Col>

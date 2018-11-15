@@ -52,24 +52,6 @@ class ProjNavs extends Component{
       projTop.y < 110
       && markNumber(el.id)
     }
-
-    // var eachTop = projects.map(proj=>{
-    //   let beginningOfProj = proj.getBoundingClientRect();
-    //   let y = beginningOfProj.y
-    //   return y
-    // })
-
-    // for(let btn of buttons){
-    //   var beginningOfProjects = btn.getBoundingClientRect();
-    //   console.log(btn);
-    // }
-    // var eachTop = buttons.map((btn) => {
-    //   // let beginningOfProj = btn.getBoundingClientRect();
-    //   // let y = beginningOfProj.y
-    //   // return y
-    // })
-
-    // console.log('eachTOP', eachTop);
     
 
   }
@@ -77,6 +59,11 @@ class ProjNavs extends Component{
   componentDidMount () {
     window.addEventListener('scroll', this.onScroll);
   }
+
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.onScroll); 
+  }
+  
 
   render(){
     return (
