@@ -7,11 +7,19 @@ import { Context } from "../../Store";
 const { Consumer } = Context;
 
 
+function markNumber(id){
+  $(`.nav-btns a`).removeClass('proj-btn__active')
+  $(`#projBtn${id}`).addClass('proj-btn__active')
+  console.log(id);
+  
+}
+
+
 class ProjNavs extends Component{
   constructor(props){
     super(props)
     this.state = {
-     isVisible: true
+     isVisible: false
     }
   }
 
@@ -26,17 +34,24 @@ class ProjNavs extends Component{
   onScroll = () => {
     var firstProj = document.getElementById('0')
     var beginningOfProjects = firstProj.getBoundingClientRect();
-    console.log(beginningOfProjects.y);
+    // console.log(beginningOfProjects.y);
+    
 
-    beginningOfProjects.y < 1
+    beginningOfProjects.y < 110
     ? this.setState({isVisible: true})
     : this.setState({isVisible: false})
     
     console.log('window height', $(window).height());
 
-    // var buttons = $('.nav-btns a')
     var projects = $('.proj')
-console.log(projects.length);
+
+    for(let el of projects){
+      var projTop = el.getBoundingClientRect();
+      console.log(projTop.y);
+      
+      projTop.y < 110
+      && markNumber(el.id)
+    }
 
     // var eachTop = projects.map(proj=>{
     //   let beginningOfProj = proj.getBoundingClientRect();
@@ -72,7 +87,7 @@ console.log(projects.length);
               <Consumer>
                 {value=>
                   value.projects.map((proj, index)=>
-                    <Link to={{ hash: `${index}`}}  onClick={(e)=>this.projectsNav(e.target.href)}>{index}</Link>
+                    <Link to={{ hash: `${index}`}} id={`projBtn${index}`} onClick={(e)=>this.projectsNav(e.target.href)}>{index}</Link>
                   )
                 }
               </Consumer>

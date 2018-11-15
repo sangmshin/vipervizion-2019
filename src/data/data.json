@@ -45,7 +45,8 @@
     "title":"Vipervizion v.2019 ",
     "description":"Single-Page App (SPA) for my portfolio written in React.js v.16.6",
     "feature":[
-      "React 16.6's lazy & Suspense"
+      "lazy & Suspense (React 16.6)",
+      "ErrorBoundary component (React 16)"
     ],
     "lang":[ "React.js", "ES6 & Beyond", "Node.js", "Express.js",  "GSAP", "Sass", "Deploy: AWS Elastic Beanstalk" ],
     "module":"",
