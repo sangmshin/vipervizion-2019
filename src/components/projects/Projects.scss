@@ -16,11 +16,15 @@
 
   .proj {
     // width: 100%;
-    height: 100vh;
+    // position: relative;
+    // height: 100%!important;
+    // border-bottom: solid white 50px!important;
+    // margin-bottom:  70px!important;
+    // height: 100vh;
 
     .proj-desc {
       padding-left: 40px;
-
+      padding-bottom: 50px;
       li {
         padding-bottom: 10px;
       }

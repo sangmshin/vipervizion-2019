@@ -1,11 +1,12 @@
-import React, { Suspense, lazy, Component, Fragment, createContext, createRef } from 'react';
-import { Button, Grid, Row, Col, Navbar, Nav, NavItem, Image, Thumbnail } from 'react-bootstrap'
+import React, { Suspense, lazy, Component,  } from 'react';
+import { Grid, Row, Col,  } from 'react-bootstrap'
 import { css } from 'react-emotion';
 import { DotLoader } from 'react-spinners';
 // import Proj from "./Proj";
 import ProjNavs from '../nav/ProjNavs';
 import './Projects.scss';
 import { Context } from "../../Store";
+import $ from 'jquery';
 // import ProjNavs from '../nav/ProjNavs';
 const { Consumer } = Context;
 
@@ -19,8 +20,31 @@ class Projects extends Component{
     }
   }
 
+  onResize =()=>{
+
+    // let proj = document.getElementsByClassName('proj')
+    // let proj_desc = document.getElementsByClassName('proj-desc')
+    // let mock = document.getElementsByClassName('v-center')
+    
+    // Object.values(proj).map((proj, i) => {
+    //   let _desc = Object.values(proj_desc)[i]
+    //   let _mock = Object.values(mock)[i]
+      
+    //   proj.clientHeight < $(_desc).height()
+    //   ? proj.style.width = $(_desc).height()
+    //   : proj.clientHeight < $(_mock).height()
+    //   ? proj.style.width = $(_mock).height()
+    //   : console.log('same');
+    // })
+    
+  }
+
+  componentDidMount(){
+    window.addEventListener('resize', this.onResize)
+  }
+
   componentWillUnmount(){
-    console.log('I am unmounted');
+    // console.log('I am unmounted');
   }
 
   render(){

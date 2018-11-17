@@ -26,12 +26,6 @@ class Navs extends Component{
   // NAV ONCLICK EVENTS
   handleActiveKey = (selectedKey)=>{
 
-    selectedKey.textContent === 'About'
-    ? console.log('about')
-    
-    : console.log('hi');
-    
-    
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 
     $('#navItems li').removeClass('active')

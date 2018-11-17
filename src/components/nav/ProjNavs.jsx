@@ -10,7 +10,7 @@ const { Consumer } = Context;
 function markNumber(id){
   $(`.nav-btns a`).removeClass('proj-btn__active')
   $(`#projBtn${id}`).addClass('proj-btn__active')
-  console.log(id);
+  // console.log(id);
   
 }
 
@@ -26,7 +26,7 @@ class ProjNavs extends Component{
   projectsNav = (href)=>{
 
     let hash = href.split("#").pop();
-    console.log(hash);
+    // console.log(hash);
     
     $('html, body').animate({ scrollTop: ($(`#${hash}`).offset().top) - 100 }, 'slow')
   }
@@ -41,13 +41,13 @@ class ProjNavs extends Component{
     ? this.setState({isVisible: true})
     : this.setState({isVisible: false})
     
-    console.log('window height', $(window).height());
+    // console.log('window height', $(window).height());
 
     var projects = $('.proj')
 
     for(let el of projects){
       var projTop = el.getBoundingClientRect();
-      console.log(projTop.y);
+      // console.log(projTop.y);
       
       projTop.y < 110
       && markNumber(el.id)

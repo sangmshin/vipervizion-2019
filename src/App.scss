@@ -48,10 +48,13 @@ body{
   font-family: 'Fira Code', Arial, Helvetica, sans-serif;
 }
 .v-center{
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   align-items: center;
 }
+// .clearfix {
+//     overflow: visible;
+// }
 @media (max-width:992px){
   .v-center{
     height: auto;
