@@ -91,6 +91,7 @@ class Navs extends Component{
               <li role="presentation">
                 <Link to={'/contact'}  onClick={(e)=>this.handleActiveKey(e.target)}>Contact</Link>
               </li>
+
             </Nav>
             
           </Navbar.Collapse>
