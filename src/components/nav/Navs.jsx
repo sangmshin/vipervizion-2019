@@ -1,15 +1,15 @@
-import React, { Suspense, lazy, Component, Fragment, createContext, createRef } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect, Prompt, withRouter } from 'react-router-dom';
-import { Button, Grid, Row, Col, Navbar, Nav, NavItem, Image, Thumbnail } from 'react-bootstrap'
-import { TweenMax } from "gsap";
+import React, {  Component, Fragment,  } from 'react';
+import {   Link,  } from 'react-router-dom';
+import {  Navbar, Nav,  Image,  } from 'react-bootstrap'
+// import { TweenMax } from "gsap";
 import ss_logo from '../../img/ss-logo_white.png';
 import $ from "jquery";
 import './Navs.scss';
-import { Context } from "../../Store";
-const { Consumer } = Context;
+// import { Context } from "../../Store";
+// const { Consumer } = Context;
 
 
-const t = TweenMax
+// const t = TweenMax
 
 
 class Navs extends Component{
@@ -24,12 +24,12 @@ class Navs extends Component{
   
 
   // NAV ONCLICK EVENTS
-  handleActiveKey = (selectedKey)=>{
+  clickNav = (selectedNav)=>{
 
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 
     $('#navItems li').removeClass('active')
-    $(selectedKey).parent().addClass('active')
+    $(selectedNav).parent().addClass('active')
 
     $(window).width() < 768
     && this.setState({isExpanded: this.state.isExpanded ? false : true}, ()=>{
@@ -67,7 +67,7 @@ class Navs extends Component{
   render(){
     return (
       <Fragment>
-        <Navbar onResize={() => console.log('resized!')} id="navbar" inverse collapseOnSelect fixedTop fluid onToggle={()=>console.log('')} onSelect={()=>console.log('')} expanded={this.state.isExpanded}>
+        <Navbar id="navbar" inverse collapseOnSelect fixedTop fluid onToggle={()=>console.log('')} onSelect={()=>console.log('')} expanded={this.state.isExpanded}>
           <Navbar.Header>
             <Navbar.Brand>
               {/* <Link to={'/'}>Home</Link> */}
@@ -78,18 +78,18 @@ class Navs extends Component{
 
           <Navbar.Collapse>
             
-            <Nav activeKey={1} pullRight  id='navItems'>
+            <Nav pullRight id='navItems'>
               <li role="presentation" className='active'>
-                <Link to={'/'} eventKey={1} onClick={(e)=>this.handleActiveKey(e.target)}>Home</Link>
+                <Link to={'/'}  onClick={(e)=>this.clickNav(e.target)}>Home</Link>
               </li>
               <li role="presentation">
-                <Link to={'/projects'}  onClick={(e)=>this.handleActiveKey(e.target)}>Projects</Link>
+                <Link to={'/projects'}  onClick={(e)=>this.clickNav(e.target)}>Projects</Link>
               </li>
               <li role="presentation">
-                <Link to={'/about'}  onClick={(e)=>this.handleActiveKey(e.target)}>About</Link>
+                <Link to={'/about'}  onClick={(e)=>this.clickNav(e.target)}>About</Link>
               </li>
               <li role="presentation">
-                <Link to={'/contact'}  onClick={(e)=>this.handleActiveKey(e.target)}>Contact</Link>
+                <Link to={'/contact'}  onClick={(e)=>this.clickNav(e.target)}>Contact</Link>
               </li>
 
             </Nav>

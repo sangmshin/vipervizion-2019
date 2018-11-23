@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, Component,  } from 'react';
 import { Grid, Row, Col,  } from 'react-bootstrap'
-import { css } from 'react-emotion';
+// import { css } from 'react-emotion';
 import { DotLoader } from 'react-spinners';
 // import Proj from "./Proj";
 import ProjNavs from '../nav/ProjNavs';
@@ -22,25 +22,23 @@ class Projects extends Component{
 
   onResize =()=>{
 
-    // let proj = document.getElementsByClassName('proj')
-    // let proj_desc = document.getElementsByClassName('proj-desc')
-    // let mock = document.getElementsByClassName('v-center')
-    
-    // Object.values(proj).map((proj, i) => {
-    //   let _desc = Object.values(proj_desc)[i]
-    //   let _mock = Object.values(mock)[i]
-      
-    //   proj.clientHeight < $(_desc).height()
-    //   ? proj.style.width = $(_desc).height()
-    //   : proj.clientHeight < $(_mock).height()
-    //   ? proj.style.width = $(_mock).height()
-    //   : console.log('same');
-    // })
-    
+    let proj_desc = document.getElementsByClassName('proj-desc')
+
+    let heights = Object.values(proj_desc).map((_desc, i) => _desc.clientHeight)
+
+    let tallest_desc = Math.max.apply(null, heights)
+
+    tallest_desc >= $(window).height()
+    ? $('.proj').addClass('regular-height')
+    : $('.proj').removeClass('regular-height')
+
   }
 
   componentDidMount(){
     window.addEventListener('resize', this.onResize)
+    let proj_desc = document.getElementsByClassName('proj-desc')
+    console.log(proj_desc);
+    
   }
 
   componentWillUnmount(){
@@ -60,7 +58,7 @@ class Projects extends Component{
             <Consumer>
                 {value=>
                   value.projects.map( (proj, index) =>
-                    <Suspense fallback={
+                    <Suspense key={index} fallback={
                       <div className='spinner'>
                         <DotLoader
                           sizeUnit={"px"}

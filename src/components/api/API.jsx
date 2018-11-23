@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import {  Grid, Row, Col, Button, Image } from 'react-bootstrap'
 import axios from 'axios';
 
 class API extends Component{

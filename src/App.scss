@@ -47,14 +47,25 @@
 body{
   font-family: 'Fira Code', Arial, Helvetica, sans-serif;
 }
+
 .v-center{
   // height: 100vh;
   display: flex;
   align-items: center;
 }
-// .clearfix {
-//     overflow: visible;
-// }
+
+.btn-warning {
+  transition: all .3s ease-out;
+  color: #fff;
+  background-color: #ef8354;
+  border-color: #ef8354;
+  &:hover{
+    color: #ef8354;
+    background-color: #fff;
+    border-color: #ef8354;
+  }
+}
+
 @media (max-width:992px){
   .v-center{
     height: auto;

@@ -4,9 +4,12 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 var cors = require('cors');
+const nodemailer = require('nodemailer')
 var compression = require('compression')
 var helmet = require('helmet')
 var request = require('request')
+var sanitizeHTML = require('sanitize-html')
+const secrets = require('./config/secrets')
 
 var port = process.env.PORT || 8000;
 
@@ -47,12 +50,40 @@ app.get('/api', function (req, res) {
 
 });
 
+app.post('/send', (req, res, next) => {
+
+  let { name, email, message } = req.body;
+  console.log(name, email, message);
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: secrets.nodemailer.user,
+      pass: secrets.nodemailer.pass
+    }
+  })
+  
+  var mailOptions = {
+    from: sanitizeHTML(email),
+    to: 'viperchin@gmail.com',
+    subject: `${sanitizeHTML(name)} has sent you a message. < ${sanitizeHTML(email)} >`,
+    text: `${sanitizeHTML(message)}`,
+    replyTo: sanitizeHTML(email)
+  };
+
+  transporter.sendMail(mailOptions, (_err, _res)=> {
+    _err 
+    ? console.log('There was an error', _err)
+    : res.send(_res)
+  })
+})
+
 
 // SERVER
 app.listen(port, console.log(`Listening on port ${port}...`));
 
 
 // LIVERELOAD
-reload(app, {
-  verbose: true
-})
+// reload(app, {
+//   verbose: true
+// })

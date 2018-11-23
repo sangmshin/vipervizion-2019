@@ -43,14 +43,14 @@ function AddButton(_link, _nameOfButton){
   return(
     _link &&
     <div className='visit-site'>
-      <Button href={_link} target="_blank"  bsStyle='primary' bsSize='large'>{_nameOfButton}</Button>
+      <Button href={_link} target="_blank"  bsStyle='primary' bsSize='large' className='btn btn-warning btn-lg'>{_nameOfButton}</Button>
     </div>
   )
 }
 
 const Proj =({projects, id})=>
   <>
-    <Row id={id} className='proj'>
+    <Row id={id} className='proj '>
       <Col xs={12} sm={12} md={6} lg={6} className='v-center'>
         <img src={projects.main_img} alt="mockup" className='img-responsive'/>
       </Col>
@@ -101,6 +101,8 @@ const Proj =({projects, id})=>
         </div>
 
       </Col>
+    </Row>
+    <Row className='clearfix'>
     </Row>
   </>
 

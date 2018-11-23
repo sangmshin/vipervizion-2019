@@ -10,6 +10,7 @@ import ss_logo from '../../img/ss-logo_blk.png';
 const links = {
   linkedin: "https://www.linkedin.com/in/sang-min-shin-46340318/",
   github: "https://github.com/sangmshin",
+  home: "/"
 }
 
 const Footer = () =>
@@ -26,7 +27,7 @@ const Footer = () =>
           <a href={links.github} target="_blank" rel="noopener noreferrer">
             <Image src={githubLogo} width='28'></Image>
           </a>  
-          <a>
+          <a href={links.home}>
             <Image src={ss_logo} width='26'></Image>     
           </a>  
         </Col>

@@ -3,7 +3,7 @@ $b-sm: 768px; // BIGGER THAN 768
 $b-md: 992px; // BIGGER THAN 992
 $b-lg: 1200px; // BIGGER THAN 1200
 
-#contact {
+.contact {
 
   padding-left: 60px;
   padding-right: 60px;
@@ -14,6 +14,10 @@ $b-lg: 1200px; // BIGGER THAN 1200
   align-items: center;
   flex-direction: column;
 
+  .direct-email{
+    margin-bottom: 30px;
+  }
+
   .contact__title_top {
     font-size: 40px;
   }
@@ -23,19 +27,64 @@ $b-lg: 1200px; // BIGGER THAN 1200
     line-height: 39px;
   }
 
+  form{
+    width: 50vw;
+    max-width: 760px;
+    min-width: 600px;
+  }
+
+  .form-group {
+    padding-bottom: 30px;
+    .message-box{
+      margin-bottom: 10px;
+    }
+    .message-box {
+      height: 20vh;
+    }
+  }
+
 }
 
-.form-field-label{
+.contact__confirm{
+  padding-left: 60px;
+  padding-right: 60px;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p{
+    max-width: 500px;
+  }
+}
+
+.form-field-label {
   text-align: right;
 }
 
-@media(max-width:$b-xs){
+
+
+@media(max-width:$b-xs) {
   .contact__title_bottom {
-    font-size: 18px!important;
-    line-height: 30px!important;
+    font-size: 18px !important;
+    line-height: 30px !important;
   }
-  .form-field-label{
+
+  form{
+    width: 90vw!important;
+    min-width: 100px!important;
+  }
+
+  .form-field-label {
     text-align: left;
   }
 }
 
+@media (max-height:700px){
+  .contact {
+    height: 100%;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+}

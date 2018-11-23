@@ -3,6 +3,11 @@ import React, { Component, createContext } from 'react';
 import axios from 'axios';
 const Context = createContext();
 const { Provider, } = Context
+
+//DEVELOPMENT MODE
+// const data_url = 'http://localhost:8000/api'
+
+// DEPLOY MODE
 const data_url = '/api'
 
 

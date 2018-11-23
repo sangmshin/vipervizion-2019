@@ -2,7 +2,7 @@ import React, {  Component } from 'react';
 import { BrowserRouter as Router, Route,  Switch } from 'react-router-dom';
 import './App.scss';
 
-import { Store, Context } from './Store'
+import { Store,  } from './Store'
 import Navs from './components/nav/Navs';
 // import ProjNavs from './components/nav/ProjNavs';
 import Home from './components/home/Home';

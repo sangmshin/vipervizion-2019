@@ -20,7 +20,11 @@
     // height: 100%!important;
     // border-bottom: solid white 50px!important;
     // margin-bottom:  70px!important;
-    // height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .v-center{
       img{
         
@@ -72,6 +76,9 @@
 
 @media (max-width: 991px) {
   .proj {
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
     height: 100% !important;
     margin-top: 100px !important;
     margin-bottom: 100px !important;
@@ -83,3 +90,8 @@
     }
   }
 }
+
+.regular-height{
+  display: block!important;
+}
+

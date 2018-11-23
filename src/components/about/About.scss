@@ -52,3 +52,11 @@ $b-lg: 1200px; // BIGGER THAN 1200
   }
 }
 
+@media (max-height:700px){
+  #about {
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
