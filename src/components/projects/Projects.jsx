@@ -24,7 +24,7 @@ class Projects extends Component{
 
     let proj_desc = document.getElementsByClassName('proj-desc')
 
-    let heights = Object.values(proj_desc).map((_desc, i) => _desc.clientHeight)
+    let heights = Object.values(proj_desc).map( _desc => _desc.clientHeight)
 
     let tallest_desc = Math.max.apply(null, heights)
 
@@ -36,9 +36,6 @@ class Projects extends Component{
 
   componentDidMount(){
     window.addEventListener('resize', this.onResize)
-    let proj_desc = document.getElementsByClassName('proj-desc')
-    console.log(proj_desc);
-    
   }
 
   componentWillUnmount(){

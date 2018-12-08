@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'
 import { Button,  Row, Col, Image, } from 'react-bootstrap'
 
 import githubLogo from '../../img/github-logo.png';
@@ -47,6 +47,8 @@ function AddButton(_link, _nameOfButton){
     </div>
   )
 }
+
+
 
 const Proj =({projects, id})=>
   <>
@@ -105,6 +107,22 @@ const Proj =({projects, id})=>
     <Row className='clearfix'>
     </Row>
   </>
+
+
+Proj.propTypes = {
+  id: PropTypes.number.isRequired,
+  projects: PropTypes.shape({
+    main_img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    feature: PropTypes.array,
+    lang: PropTypes.array.isRequired,
+    module: PropTypes.array,
+    role: PropTypes.string.isRequired,
+    links: PropTypes.object.isRequired
+  })
+}
+
 
 export default Proj;
 

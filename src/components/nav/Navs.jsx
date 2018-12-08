@@ -21,8 +21,6 @@ class Navs extends Component{
     }
   }
 
-  
-
   // NAV ONCLICK EVENTS
   clickNav = (selectedNav)=>{
 
@@ -103,3 +101,20 @@ class Navs extends Component{
 }
 
 export default Navs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

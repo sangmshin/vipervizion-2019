@@ -10,7 +10,7 @@
       "Lets you know whether the weather is good or bad based on historic weather temperature in the same location and weather condition"
     ],
     "lang":[ "Node.js", "Express.js", "ES6 & Beyond", "Handlebars.js", "Deploy: AWS Elastic Beanstalk" ],
-    "module":["sentiment analysis", "feedparser (for news feeds)"],
+    "module":["sentiment analysis", "feedparser (for news feeds)", "alexa-sdk"],
     "role":"Front-End & Back-End Development Lead",
     "links": {
       "url":"http://ai-today.us-east-1.elasticbeanstalk.com/",
@@ -45,15 +45,34 @@
     "title":"Vipervizion v.2019 ",
     "description":"Single-Page App (SPA) for my portfolio written in React.js v.16.6",
     "feature":[
-      "lazy & Suspense (React 16.6)",
-      "ErrorBoundary component (React 16)"
+      "Code splitting components using React's latest features, lazy & Suspense (React 16.6)",
+      "ErrorBoundary component (React 16)",
+      "Context API to control state management (React 16)",
+      "Dynamically generates contents from JSON-based API request"
     ],
     "lang":[ "React.js", "ES6 & Beyond", "Node.js", "Express.js",  "GSAP", "Sass", "Deploy: AWS Elastic Beanstalk" ],
-    "module":"",
+    "module":["react-bootstrap", "react-spinner", "axios", "gsap", "jquery", "nodemailer", "styled-components", "sanitize-html"],
     "role":"Javascript Full-Stack Development",
     "links": {
       "url":"",
       "github":"https://github.com/sangmshin/vipervizion-2019"
+    }
+  },
+  {
+    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-react-newsfeed.png",
+    "title":"React/Redux Real-Time News Feed",
+    "description":"Real-time news feed app built in React.js and Redux.js",
+    "feature":[
+      "Auto-populating real-time news feed for 4 different topics from API request",
+      "Code splitting components using React's latest features, lazy & Suspense (React 16.6)",
+      "Redux.js to control state management"
+    ],
+    "lang":[ "React.js", "Redux.js", "ES6 & Beyond", "Node.js", "Express.js", "Sass", "Deploy: AWS Elastic Beanstalk" ],
+    "module":["react-bootstrap", "react-spinner", "axios"],
+    "role":"Front-End Development",
+    "links": {
+      "url":"http://newsfeed.us-east-1.elasticbeanstalk.com/",
+      "github":"https://github.com/sangmshin/news-feed-react-redux"
     }
   },
   {

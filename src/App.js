@@ -11,23 +11,37 @@ import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Footer from './components/footer/Footer';
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Store>
-          <Navs/>
-          <Switch>
-            <Route exact={true} path='/' component={Home} />
-            <Route path='/projects' component={Projects} />
-            <Route path='/about' component={About} />
-            <Route path='/contact' component={Contact} />
-          </Switch>  
-          <Footer></Footer>
-        </Store>
-      </Router>
-    );
-  }
-}
+const App =()=>
+  <Router>
+    <Store>
+      <Navs/>
+      <Switch>
+        <Route exact={true} path='/' component={Home} />
+        <Route path='/projects' component={Projects} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+      </Switch>  
+      <Footer></Footer>
+    </Store>
+  </Router>
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <Router>
+//         <Store>
+//           <Navs/>
+//           <Switch>
+//             <Route exact={true} path='/' component={Home} />
+//             <Route path='/projects' component={Projects} />
+//             <Route path='/about' component={About} />
+//             <Route path='/contact' component={Contact} />
+//           </Switch>  
+//           <Footer></Footer>
+//         </Store>
+//       </Router>
+//     );
+//   }
+// }
 
 export default App;
