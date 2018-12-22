@@ -9,7 +9,7 @@ import './Navs.scss';
 // const { Consumer } = Context;
 
 
-// const t = TweenMax
+
 
 
 class Navs extends Component{
@@ -23,6 +23,9 @@ class Navs extends Component{
 
   // NAV ONCLICK EVENTS
   clickNav = (selectedNav)=>{
+
+    console.log(selectedNav);
+    
 
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 
@@ -49,6 +52,11 @@ class Navs extends Component{
     })
   }
 
+  makeActive = nav => {
+    $('#navItems li').removeClass('active')
+    $(nav).parent().addClass('active')
+  }
+
 
   // ON WINDOW RESIZE
   onWindowResize = ()=>{
@@ -59,10 +67,28 @@ class Navs extends Component{
   componentDidMount () {
     window.addEventListener('resize', this.onWindowResize);
     // window.addEventListener('scroll', this.onScroll);
+    window.location.hash.includes('projects')
+    ? this.makeActive('#navProjBtn')
+    : window.location.hash.includes('about')
+    ? this.makeActive('#navAboutBtn')
+    : window.location.hash.includes('contact')
+    ? this.makeActive('#navContactBtn')
+    : this.makeActive('#navHomeBtn')
+  }
+
+  componentDidUpdate(){
+    window.location.hash.includes('projects')
+    ? this.makeActive('#navProjBtn')
+    : window.location.hash.includes('about')
+    ? this.makeActive('#navAboutBtn')
+    : window.location.hash.includes('contact')
+    ? this.makeActive('#navContactBtn')
+    : this.makeActive('#navHomeBtn')
   }
 
 
   render(){
+    
     return (
       <Fragment>
         <Navbar id="navbar" inverse collapseOnSelect fixedTop fluid onToggle={()=>console.log('')} onSelect={()=>console.log('')} expanded={this.state.isExpanded}>
@@ -78,16 +104,16 @@ class Navs extends Component{
             
             <Nav pullRight id='navItems'>
               <li role="presentation" className='active'>
-                <Link to={'/'}  onClick={(e)=>this.clickNav(e.target)}>Home</Link>
+                <Link to={'/'} id='navHomeBtn' onClick={(e)=>this.clickNav(e.target)}>Home</Link>
               </li>
               <li role="presentation">
-                <Link to={'/projects'}  onClick={(e)=>this.clickNav(e.target)}>Projects</Link>
+                <Link to={'/projects'} id='navProjBtn' onClick={(e)=>this.clickNav(e.target)}>Projects</Link>
               </li>
               <li role="presentation">
-                <Link to={'/about'}  onClick={(e)=>this.clickNav(e.target)}>About</Link>
+                <Link to={'/about'} id='navAboutBtn' onClick={(e)=>this.clickNav(e.target)}>About</Link>
               </li>
               <li role="presentation">
-                <Link to={'/contact'}  onClick={(e)=>this.clickNav(e.target)}>Contact</Link>
+                <Link to={'/contact'} id='navContactBtn' onClick={(e)=>this.clickNav(e.target)}>Contact</Link>
               </li>
 
             </Nav>

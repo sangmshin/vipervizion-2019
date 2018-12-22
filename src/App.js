@@ -1,5 +1,5 @@
 import React, {  Component } from 'react';
-import { BrowserRouter as Router, Route,  Switch } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Route,  Switch } from 'react-router-dom';
 import './App.scss';
 
 import { Store,  } from './Store'
@@ -12,7 +12,7 @@ import Projects from './components/projects/Projects';
 import Footer from './components/footer/Footer';
 
 const App =()=>
-  <Router>
+  <HashRouter>
     <Store>
       <Navs/>
       <Switch>
@@ -23,25 +23,8 @@ const App =()=>
       </Switch>  
       <Footer></Footer>
     </Store>
-  </Router>
+  </HashRouter>
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <Store>
-//           <Navs/>
-//           <Switch>
-//             <Route exact={true} path='/' component={Home} />
-//             <Route path='/projects' component={Projects} />
-//             <Route path='/about' component={About} />
-//             <Route path='/contact' component={Contact} />
-//           </Switch>  
-//           <Footer></Footer>
-//         </Store>
-//       </Router>
-//     );
-//   }
-// }
+
 
 export default App;
