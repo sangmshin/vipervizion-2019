@@ -1,5 +1,5 @@
-import React, {  Component } from 'react';
-import { BrowserRouter as Router, HashRouter, Route,  Switch } from 'react-router-dom';
+import React from 'react';
+import { HashRouter, Route,  Switch } from 'react-router-dom';
 import './App.scss';
 
 import { Store,  } from './Store'
@@ -11,7 +11,8 @@ import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Footer from './components/footer/Footer';
 
-const App =()=>
+
+const App = () =>
   <HashRouter>
     <Store>
       <Navs/>

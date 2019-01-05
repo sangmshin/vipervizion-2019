@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types'
 import { Button,  Row, Col, Image, } from 'react-bootstrap'
 
@@ -50,7 +50,7 @@ function AddButton(_link, _nameOfButton){
 
 
 
-const Proj =({projects, id})=>
+const Proj = memo(({projects, id}) =>
   <>
     <Row id={id} className='proj '>
       <Col xs={12} sm={12} md={6} lg={6} className='v-center'>
@@ -107,6 +107,7 @@ const Proj =({projects, id})=>
     <Row className='clearfix'>
     </Row>
   </>
+)
 
 
 Proj.propTypes = {
