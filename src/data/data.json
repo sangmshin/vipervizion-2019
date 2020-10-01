@@ -1,6 +1,40 @@
 [
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-aitoday.png",
+    "main_img": "https://vipervizion-2020.s3.amazonaws.com/images/mock-msg.png",
+    "title": "MSG.com",
+    "description": "Maintain and build features for MSG.com using React Framework with PostCSS, isomorphic-styling and server-side-rendering. Write clean and DRY React code in a Test Driven environment using Enzyme and Jest. Also build MSG.com in AMP Framework that are developed by Google to help the users/publishers to improve the speed and readability in mobile web pages. Update/create CMS with Wordpress for clients and make sure the front-end receives the correct shape of JSON data to render.",
+    "feature": [
+      "isomorphic-styling",
+      "Server-Side-Render",
+      "headless CMS"
+    ],
+    "lang": [ "React.js", "Redux", "ES6+", "PostCSS", "node.js", "moment" ],
+    "module": "",
+    "role": "Senior Full Stack Engineer",
+    "links": {
+      "url": "https://www.msg.com"
+    }
+  },
+  {
+    "main_img": "https://vipervizion-2020.s3.amazonaws.com/images/mock-happyholidays2018.png",
+    "title": "Dow Jones' Happy Holidays 2018",
+    "description": "As we look forward to a exciting 2019, please take time to enjoy some of our world class journalism from 2018. From ending the biggest fraud to hit Silicon Valley in a decade, unravelling the biggest political scandal to hit Malaysia and throwing light on the shady deals of Michael Cohen, our hard working reporting teams have hit the mark time and again. Best wishes to you and your family this holiday season.",
+    "feature": [
+      "React.memo to avoid unnecessarily re-rendering functional components (React v.16.6)",
+      "Context API to control state management (React v.16.3)",
+      "ErrorBoundary component (React v.16)",
+      "StrictMode for highlighting potential problems in an app while in development mode (React v.16.3)"
+    ],
+    "lang": [ "React.js", "GSAP's TweenMax", "ES6+", "Bootstrap 3", "jQuery", "Deploy: Eloqua" ],
+    "module": "",
+    "role": "Front-End Development Lead",
+    "links": {
+      "url": "https://www.dowjones.com/happyholiday/2018/",
+      "github": "https://github.com/sangmshin/wsj/tree/WSJM-5137"
+    }
+  },
+  {
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-aitoday.png",
     "title":"A.I. Today",
     "description":"A.I. Today app is not a simple news/weather app. I wanted to create an A.I. experience with users by adding emotion and conscience to this app.",
     "feature":[
@@ -10,7 +44,7 @@
       "Lets you know whether the weather is good or bad based on historic weather temperature in the same location and weather condition"
     ],
     "lang":[ "Node.js", "Express.js", "ES6 & Beyond", "Handlebars.js", "Deploy: AWS Elastic Beanstalk" ],
-    "module":["sentiment analysis", "feedparser (for news feeds)", "alexa-sdk"],
+    "module":["sentiment analysis", "feedparser (for news feeds)"],
     "role":"Front-End & Back-End Development Lead",
     "links": {
       "url":"http://ai-today.us-east-1.elasticbeanstalk.com/",
@@ -18,7 +52,7 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-wp-edu.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-wp-edu.png",
     "title":"WSJ Education",
     "description":"The Wall Street Journal's new look Education site for college students and college professors.",
     "lang":[ "HTML5", "PHP", "Sass", "jQuery", "Gulp.js", "Bootstrap 3" ],
@@ -29,7 +63,7 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-react-dj.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-react-dj.png",
     "title":"Dow Jones DNA: Data-Driven Business",
     "description":"Landing page created for Dow Jones DNA with completely controlled form components in React.js.",
     "lang":[ "React.js", "ES6", "HTML5", "CSS3" ],
@@ -41,16 +75,17 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-vv.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-vv.png",
     "title":"Vipervizion v.2019 ",
     "description":"Single-Page App (SPA) for my portfolio written in React.js v.16.6",
     "feature":[
-      "Code splitting components using React's latest features, lazy & Suspense (React 16.6)",
-      "ErrorBoundary component (React 16)",
-      "Context API to control state management (React 16)",
-      "Dynamically generates contents from JSON-based API request"
+      "React.memo to avoid unnecessarily re-rendering functional components (React v.16.6)",
+      "Code splitting components using React's latest features, lazy & Suspense (React v.16.6)",
+      "ErrorBoundary component (React v.16)",
+      "Context API to control state management (React v.16.3)",
+      "Dynamically generates contents via JSON-based API request from AWS S3."
     ],
-    "lang":[ "React.js", "ES6 & Beyond", "Node.js", "Express.js",  "GSAP", "Sass", "Deploy: AWS Elastic Beanstalk" ],
+    "lang":[ "React.js", "ES6 & Beyond", "Node.js", "Express.js", "GSAP", "Sass", "Deploy: AWS Elastic Beanstalk" ],
     "module":["react-bootstrap", "react-spinner", "axios", "gsap", "jquery", "nodemailer", "styled-components", "sanitize-html"],
     "role":"Javascript Full-Stack Development",
     "links": {
@@ -59,12 +94,13 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-react-newsfeed.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-react-newsfeed.png",
     "title":"React/Redux Real-Time News Feed",
     "description":"Real-time news feed app built in React.js and Redux.js",
     "feature":[
+      "React.memo to avoid unnecessarily re-rendering functional components (React v.16.6)",
       "Auto-populating real-time news feed for 4 different topics from API request",
-      "Code splitting components using React's latest features, lazy & Suspense (React 16.6)",
+      "Code splitting components using React's latest features, lazy & Suspense (React v.16.6)",
       "Redux.js to control state management"
     ],
     "lang":[ "React.js", "Redux.js", "ES6 & Beyond", "Node.js", "Express.js", "Sass", "Deploy: AWS Elastic Beanstalk" ],
@@ -76,7 +112,7 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-alexa-hc.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-alexa-hc.png",
     "title":"Holiday Chill",
     "description":"Deutsch Inc. asked me to build Amazon's Alexa app for holiday season to give out Echo Dots to their clients and employees. I created several prototypes prior to build this public skill. It was very challenging since Alexa SDK was new (then and still) and there was not enough/solid documents but thanks to my favorite language, `Node.js` which helped me write back-end successfully. One month later, the same app was published in Google Assistant for Google Home device.",
     "feature":[
@@ -84,7 +120,7 @@
       "Listen to the sound of winter for relaxation and stress-free time"
     ],
     "lang":[ "ES6 & Beyond", "Node.js", "Alexa SDK", "Deploy: AWS Lambda", "Firebase", "Dialogflow", "Deploy: Actions on Google" ],
-    "module":"",
+    "module": [ "alexa-sdk"],
     "role":"Back-End Development Lead",
     "links": {
       "url":"https://theholidaychill.com/",
@@ -95,7 +131,7 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-alexa-paintbot.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-alexa-paintbot.png",
     "title":"HGTV Valspar Paint",
     "description":"Created an Amazon's Alexa skill for HGTV+Valspar Paint pitch purpose. This skill is mainly designed for Echo Show device with Node.js & Alexa SDK that includes many user interactive features.",
     "feature":[
@@ -104,16 +140,16 @@
       "Google Map integration"
     ],
     "lang":[ "Node.js", "Alexa SDK", "ES6", "Deploy: AWS Lambda" ],
-    "module":"",
+    "module": [ "alexa-sdk" ],
     "role":"Back-End Development lead",
     "links": {
-      "video":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/video/valspar.mp4",
+      "video":"https://vipervizion-2020.s3.amazonaws.com/video/valspar.mp4",
       "github":"https://github.com/sangmshin/alexa_valspar_paintbot"
     }
   },
 
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-shoppage-barrons.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-shoppage-barrons.png",
     "title":"Barron's Shop Page",
     "description":"One of Dow Jones & Company's weekly newspaper/magazine, Barron's online shop page to provide print and digital copy. ",
     "feature":"",
@@ -125,7 +161,7 @@
     }
   },
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-wp-foe.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-wp-foe.png",
     "title":"WSJ Future of Everything Festival 2018",
     "description":"The Wall Street Journal's annual festival site built in WordPress.",
     "feature":"",
@@ -139,7 +175,7 @@
   },
 
   {
-    "main_img":"https://s3.amazonaws.com/sangminshin/vipervizion-2019/images/mock-lp-holiday.png",
+    "main_img":"https://vipervizion-2020.s3.amazonaws.com/images/mock-lp-holiday.png",
     "title":"Holiday Chill Landing Page",
     "description":"Landing page that describes how to install, enable and use Alexa app, Holiday Chill created by Deutsch Inc.",
     "feature":"",

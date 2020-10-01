@@ -1,15 +1,14 @@
 import React, { Fragment, } from 'react';
-
 import Intro from '../intro/Intro';
 import Projects from '../projects/Projects';
-import ProjNavs from '../nav/ProjNavs';
+import ProjectNavs from '../nav/ProjectNavs';
 
-
-const Home =()=> 
+const Home = () => (
   <Fragment>
-    <ProjNavs/>
+    <ProjectNavs/>
     <Intro/>
     <Projects/>
   </Fragment>
+)
 
 export default Home;

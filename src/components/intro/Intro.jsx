@@ -4,9 +4,8 @@ import "./Intro.scss";
 import ss_logo from '../../img/ss-logo_blk.png';
 import styled from 'styled-components';
 import { TweenMax } from 'gsap';
+
 const t = TweenMax
-
-
 const Arrow = styled.p`
   font-size: 50px;
   text-align: center;
@@ -14,33 +13,26 @@ const Arrow = styled.p`
   transform: rotate(90deg) translateY(-30%);
 `;
 
-
 class Intro extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-     isVisible: true
-    }
+  state = {
+    isVisible: true
   }
 
-  onScroll =()=> {
+  onScroll = () => {
     // console.log('scrolling. window-pageYoffSet', window.pageYOffset);
     t.to(this.arrow, .5, {alpha:0})
   }
 
-  componentDidMount(){
-    
+  componentDidMount() {
     t.to(this.arrow, 1, {y: -20, yoyo: true, repeat: -1})
     window.addEventListener('scroll', this.onScroll)
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll); 
   }
 
-
-  render(){
-    
+  render() {
     return (
       <Grid id='intro'>
         <Row>

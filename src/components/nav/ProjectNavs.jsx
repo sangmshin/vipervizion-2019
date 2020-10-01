@@ -1,40 +1,35 @@
-import React, {  Component,  } from 'react';
-import { BrowserRouter as Router,  Link,  } from 'react-router-dom';
-import {  Grid, Row, Col,  } from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Grid, Row, Col } from 'react-bootstrap'
 import $ from 'jquery';
 import './Navs.scss';
 import { Context } from "../../Store";
+
 const { Consumer } = Context;
-
-
-function markNumber(id){
+const markNumber = id => {
   $(`.nav-btns a`).removeClass('proj-btn__active')
   $(`#projBtn${id}`).addClass('proj-btn__active')
 }
 
-
-class ProjNavs extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-     isVisible: false
-    }
+class ProjectNavs extends Component{
+  state = {
+    isVisible: false
   }
 
-  projectsNav = (href)=>{
-
+  projectsNav = href => {
     let hash = href.split("#").pop();
     
     $('html, body').animate({ scrollTop: ($(`#${hash}`).offset().top) - 100 }, 'slow')
   }
 
   onScroll = () => {
-    var firstProj = document.getElementById('0')
+    var firstProj = document.getElementById('0');
+    if (!firstProj) return;
     var beginningOfProjects = firstProj.getBoundingClientRect();
     
     beginningOfProjects.y < 110
-    ? this.setState({isVisible: true})
-    : this.setState({isVisible: false})
+      ? this.setState({isVisible: true})
+      : this.setState({isVisible: false})
     
     var projects = $('.proj')
 
@@ -42,20 +37,17 @@ class ProjNavs extends Component{
       var projTop = el.getBoundingClientRect();
       
       projTop.y < 110
-      && markNumber(el.id)
+        && markNumber(el.id)
     }
-    
-
   }
 
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('scroll', this.onScroll);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll); 
   }
-  
 
   render(){
     return (
@@ -78,4 +70,4 @@ class ProjNavs extends Component{
   }
 }
 
-export default ProjNavs;
+export default ProjectNavs;

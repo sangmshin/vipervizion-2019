@@ -1,51 +1,37 @@
-import React, { Suspense, lazy, Component,  } from 'react';
-import { Grid, Row, Col,  } from 'react-bootstrap'
-// import { css } from 'react-emotion';
+import React, { Suspense, lazy, Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap'
 import { DotLoader } from 'react-spinners';
-// import Proj from "./Proj";
-import ProjNavs from '../nav/ProjNavs';
+import ProjectNavs from '../nav/ProjectNavs';
 import './Projects.scss';
 import { Context } from "../../Store";
 import $ from 'jquery';
-// import ProjNavs from '../nav/ProjNavs';
-const { Consumer } = Context;
 
-const SingleProject = lazy(()=>import('./Proj'))
+const { Consumer } = Context;
+const SingleProject = lazy(() => import('./Project'))
 
 class Projects extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-     loading: true
-    }
+  state = {
+    loading: true
   }
 
-  onResize =()=>{
-
+  onResize = () => {
     let proj_desc = document.getElementsByClassName('proj-desc')
-
-    let heights = Object.values(proj_desc).map( _desc => _desc.clientHeight)
-
+    let heights = Object.values(proj_desc).map(desc => desc.clientHeight)
     let tallest_desc = Math.max.apply(null, heights)
 
     tallest_desc >= $(window).height()
-    ? $('.proj').addClass('regular-height')
-    : $('.proj').removeClass('regular-height')
-
+      ? $('.proj').addClass('regular-height')
+      : $('.proj').removeClass('regular-height')
   }
 
   componentDidMount(){
     window.addEventListener('resize', this.onResize)
   }
 
-  componentWillUnmount(){
-    // console.log('I am unmounted');
-  }
-
   render(){
     return (
       <>
-      <ProjNavs/>
+      <ProjectNavs/>
           <Grid fluid id='projects'>
             <Row>
               <Col>
@@ -53,7 +39,7 @@ class Projects extends Component{
               </Col>
             </Row>
             <Consumer>
-                {value=>
+                {value =>
                   value.projects.map( (proj, index) =>
                     <Suspense key={index} fallback={
                       <div className='spinner'>

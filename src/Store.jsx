@@ -1,38 +1,30 @@
 import React, { Component, createContext } from 'react';
-// import data from './data/data.json';
-import axios from 'axios';
+import data from './data/data.json'; //DEVELOPMENT MODE
+// import axios from 'axios';
+
 const Context = createContext();
-const { Provider, } = Context
-
-//DEVELOPMENT MODE
-// const data_url = 'http://localhost:8000/api'
-
-// DEPLOY MODE
-const data_url = '/api'
+const { Provider } = Context
+// const dataUrl = 'http://localhost:3000/api'; //DEVELOPMENT MODE
+// const dataUrl = '/api'; // DEPLOY MODE
 
 
 class Store extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-    //  projects: data
-     projects: []
-    }
+  state = {
+    projects: data //DEVELOPMENT MODE
+    // projects: [] // DEPLOY MODE
   }
 
-  componentDidMount(){
-    axios.get(data_url, { 
-      headers: { 
-        'crossDomain': true, 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'mode': 'cors'
-        }
-      })
-      .then(res=>{
-        this.setState({projects: res.data})
-      })
-  }
+  // componentDidMount(){
+  //   axios.get(dataUrl, { 
+  //     headers: { 
+  //       'crossDomain': true, 
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json',
+  //       'mode': 'cors'
+  //       }
+  //     })
+  //     .then(res => this.setState({projects: res.data}))
+  // }
 
   render(){
     return (

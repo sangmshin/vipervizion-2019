@@ -1,4 +1,3 @@
-const reload = require('reload')
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -11,35 +10,33 @@ var request = require('request')
 var sanitizeHTML = require('sanitize-html')
 const secrets = require('./config/secrets')
 
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
-app.use(bodyParser(bodyParser.json()));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet())
 
-
-// DEVELOPMENT MODE
-// app.use(express.static(path.join(__dirname, 'public')));
-
+// DEPLOY MODE
+app.use(express.static(path.join(__dirname, 'public')));
 
 // PRE-DEPLOY TEST MODE 
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(compression())
 
 
 app.get('/api', function (req, res) {
 
-  var url = 'https://s3.amazonaws.com/sangminshin/vipervizion-2019/data/data.json';
+  const url = 'https://vipervizion-2020.s3.amazonaws.com/data/data.json';
 
   request(url, (error, response, body) => {
     if (!error && response.statusCode === 200) {
 
-      var result = JSON.parse(body);
+      const result = JSON.parse(body);
 
       res.json(result);
 
@@ -81,9 +78,3 @@ app.post('/send', (req, res, next) => {
 
 // SERVER
 app.listen(port, console.log(`Listening on port ${port}...`));
-
-
-// LIVERELOAD
-// reload(app, {
-//   verbose: true
-// })

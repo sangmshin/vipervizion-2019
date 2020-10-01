@@ -1,10 +1,13 @@
+development mode
+deploy
+
 ./app.js
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 ./src/Store.jsx
-const data_url = 'http://localhost:8000/api'
-const data_url = '/api'
+const dataUrl = 'http://localhost:8000/api'
+const dataUrl = '/api'
 
 ./src/components/contact/Contact.jsx
 const devURL = 'http://localhost:8000/send'
