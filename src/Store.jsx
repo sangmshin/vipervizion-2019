@@ -23,7 +23,7 @@ class Store extends Component{
   //       'mode': 'cors'
   //       }
   //     })
-  //     .then(res => this.setState({projects: res.data}))
+  //     .then(res => this.setState({ projects: res.data }))
   // }
 
   render(){
