@@ -20,11 +20,11 @@ class Intro extends Component{
 
   onScroll = () => {
     // console.log('scrolling. window-pageYoffSet', window.pageYOffset);
-    t.to(this.arrow, .5, {alpha:0})
+    t.to(this.arrow, .5, { alpha: 0 })
   }
 
   componentDidMount() {
-    t.to(this.arrow, 1, {y: -20, yoyo: true, repeat: -1})
+    t.to(this.arrow, 1, { y: -20, yoyo: true, repeat: -1 })
     window.addEventListener('scroll', this.onScroll)
   }
 
@@ -39,7 +39,7 @@ class Intro extends Component{
           <Col className='text-center'>
             <Image src={ss_logo} width={150} className='ss-logo__intro'></Image>
             <p className='intro__title_top'>Hello, my name is Sang Shin</p>
-            <p className='intro__title_bottom'>(I'm) <span style={{color:'#ef8354'}}>=></span> Javascript Full-Stack Developer <span style={{color:'#ef8354'}}>from</span> './New York'</p>
+            <p className='intro__title_bottom'>(I'm) <span style={{color:'#ef8354'}}>=></span> Javascript Full-Stack Engineer <span style={{color:'#ef8354'}}>from</span> './New York'</p>
           </Col>
         </Row>  
         <Row className="arrow">

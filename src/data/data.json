@@ -2,10 +2,10 @@
   {
     "main_img": "https://vipervizion-2020.s3.amazonaws.com/images/mock-msg.png",
     "title": "MSG.com",
-    "description": "Maintain and build features for MSG.com using React Framework with PostCSS, isomorphic-styling and server-side-rendering. Write clean and DRY React code in a Test Driven environment using Enzyme and Jest. Also build MSG.com in AMP Framework that are developed by Google to help the users/publishers to improve the speed and readability in mobile web pages. Update/create CMS with Wordpress for clients and make sure the front-end receives the correct shape of JSON data to render.",
+    "description": "Maintain and build features for MSG.com using React with Redux, webpack, PostCSS, isomorphic-styling and server-side-rendering (node.js/Express). Write clean and DRY ES6+ in a Test Driven environment using Enzyme and Jest. Also build MSG.com in AMP Framework that are developed by Google to help the users/publishers improve their speed and readability in mobile web pages. Update/create CMS with Wordpress for clients and make sure the front-end receives the correct shape of JSON data to render.",
     "feature": [
       "isomorphic-styling",
-      "Server-Side-Render",
+      "Server-Side-Rendering",
       "headless CMS"
     ],
     "lang": [ "React.js", "Redux", "ES6+", "PostCSS", "node.js", "moment" ],

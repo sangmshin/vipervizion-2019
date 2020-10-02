@@ -17,7 +17,7 @@ const Footer = () => (
     <Grid id='footer' fluid>
       <Row>
         <Col xs={12} sm={12} md={12} lg={12} className='text-center'>
-          <p>Copyright © 2018 Sang Min Shin • New York based Javascript Full-Stack Developer</p>
+          <p>Copyright © 2020 Sang Shin • New York based Javascript Full-Stack Engineer</p>
         </Col>
         <Col xs={12} sm={12} md={12} lg={12} className='text-center'>
           <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer">

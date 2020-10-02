@@ -4,10 +4,8 @@ $b-md: 992px; // BIGGER THAN 992
 $b-lg: 1200px; // BIGGER THAN 1200
 
 .contact {
-
   padding-left: 60px;
   padding-right: 60px;
-
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -35,25 +33,26 @@ $b-lg: 1200px; // BIGGER THAN 1200
 
   .form-group {
     padding-bottom: 30px;
+
     .message-box {
       margin-bottom: 10px;
     }
+
     .message-box {
       height: 20vh;
     }
   }
-
 }
 
 .contact__confirm {
   padding-left: 60px;
   padding-right: 60px;
-
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   p {
     max-width: 500px;
   }
