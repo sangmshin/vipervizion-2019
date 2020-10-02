@@ -14,7 +14,7 @@ $b-lg: 1200px; // BIGGER THAN 1200
   align-items: center;
   flex-direction: column;
 
-  .direct-email{
+  .direct-email {
     margin-bottom: 30px;
   }
 
@@ -27,7 +27,7 @@ $b-lg: 1200px; // BIGGER THAN 1200
     line-height: 39px;
   }
 
-  form{
+  form {
     width: 50vw;
     max-width: 760px;
     min-width: 600px;
@@ -35,7 +35,7 @@ $b-lg: 1200px; // BIGGER THAN 1200
 
   .form-group {
     padding-bottom: 30px;
-    .message-box{
+    .message-box {
       margin-bottom: 10px;
     }
     .message-box {
@@ -45,7 +45,7 @@ $b-lg: 1200px; // BIGGER THAN 1200
 
 }
 
-.contact__confirm{
+.contact__confirm {
   padding-left: 60px;
   padding-right: 60px;
 
@@ -54,7 +54,7 @@ $b-lg: 1200px; // BIGGER THAN 1200
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  p{
+  p {
     max-width: 500px;
   }
 }
@@ -63,15 +63,13 @@ $b-lg: 1200px; // BIGGER THAN 1200
   text-align: right;
 }
 
-
-
 @media(max-width:$b-xs) {
   .contact__title_bottom {
     font-size: 18px !important;
     line-height: 30px !important;
   }
 
-  form{
+  form {
     width: 90vw!important;
     min-width: 100px!important;
   }
@@ -81,7 +79,7 @@ $b-lg: 1200px; // BIGGER THAN 1200
   }
 }
 
-@media (max-height:700px){
+@media (max-height:700px) {
   .contact {
     height: 100%;
     margin-top: 70px;

@@ -1,16 +1,16 @@
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var app = express();
-var cors = require('cors');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const app = express();
+const cors = require('cors');
 const nodemailer = require('nodemailer')
-var compression = require('compression')
-var helmet = require('helmet')
-var request = require('request')
-var sanitizeHTML = require('sanitize-html')
+const compression = require('compression')
+const helmet = require('helmet')
+const request = require('request')
+const sanitizeHTML = require('sanitize-html')
 const secrets = require('./config/secrets')
 
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -49,7 +49,7 @@ app.get('/api', function (req, res) {
 
 app.post('/send', (req, res, next) => {
 
-  let { name, email, message } = req.body;
+  const { name, email, message } = req.body;
   console.log(name, email, message);
 
   const transporter = nodemailer.createTransport({
@@ -68,10 +68,10 @@ app.post('/send', (req, res, next) => {
     replyTo: sanitizeHTML(email)
   };
 
-  transporter.sendMail(mailOptions, (_err, _res)=> {
+  transporter.sendMail(mailOptions, (_err, _res) => {
     _err 
-    ? console.log('There was an error', _err)
-    : res.send(_res)
+      ? console.log('There was an error', _err)
+      : res.send(_res)
   })
 })
 

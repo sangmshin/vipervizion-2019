@@ -1,4 +1,4 @@
-import React, { Fragment, } from 'react';
+import React, { Fragment } from 'react';
 import Intro from '../intro/Intro';
 import Projects from '../projects/Projects';
 import ProjectNavs from '../nav/ProjectNavs';

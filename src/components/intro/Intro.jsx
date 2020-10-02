@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  Grid, Row, Col, Image } from 'react-bootstrap'
+import { Grid, Row, Col, Image } from 'react-bootstrap'
 import "./Intro.scss";
 import ss_logo from '../../img/ss-logo_blk.png';
 import styled from 'styled-components';

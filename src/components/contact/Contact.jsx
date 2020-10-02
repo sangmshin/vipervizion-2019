@@ -1,6 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
-import { Button, Grid, Row, Col, FormGroup, FormControl } from 'react-bootstrap'
+import {
+  // Button,
+  Grid,
+  Row,
+  Col,
+  // FormGroup,
+  // FormControl
+} from 'react-bootstrap'
 import './Contact.scss';
 
 class Contact extends Component{
@@ -12,7 +19,7 @@ class Contact extends Component{
   }
 
   validateName = () => {
-    let { name } = this.state;
+    const { name } = this.state;
 
     if (name.length > 1) return 'success'
     else if (name.length < 2) return 'error';
@@ -21,7 +28,7 @@ class Contact extends Component{
   }
 
   validateEmail = () => {
-    let { email } = this.state;
+    const { email } = this.state;
 
     if (email.length > 1) return 'success'
     else if (email.length < 2) return 'error';
@@ -32,21 +39,17 @@ class Contact extends Component{
   submitForm = e => {
     e.preventDefault();
 
-    let { name, email, message } = this.state
-    const prodURL = 'http://vipervizion2020-env.eba-idqp92sx.us-east-2.elasticbeanstalk.com/send'
+    const { name, email, message } = this.state
+    const PROD_URL = 'http://vipervizion2020-env.eba-idqp92sx.us-east-2.elasticbeanstalk.com/send'
 
-    axios.post(prodURL, {
-      name: name,
-      email: email,
-      message: message 
-    })
-    .then(res => {
-      console.log('Response from backend: ', res);
-      
-      res.status === 200
-        && this.setState({isSent: true})
-    })
-    .catch(err => console.log('Error occurred: ', err))
+    axios.post(PROD_URL, { name, email, message })
+      .then(res => {
+        console.log('Response from backend: ', res);
+        
+        res.status === 200
+          && this.setState({isSent: true})
+      })
+      .catch(err => console.log('Error occurred: ', err))
   }
 
   confirmRender = () => (
@@ -78,33 +81,52 @@ class Contact extends Component{
       <Row className="direct-email">
         <Col className='text-center'>
           <p>
-            Please send an email to <a href="mailto:sangminshin@mail.com" target="_blank" rel="noopener noreferrer" style={{color:'#ef8354'}}>sangminshin@mail.com</a> or simply fill out the form below.
+            Please send an email to <a href="mailto:sangshin.email@gmail.com" target="_blank" rel="noopener noreferrer" style={{color:'#ef8354'}}>sangshin.email@gmail.com</a>
           </p>
         </Col>
       </Row>
 
-      <Row >
+      {/* <Row>
         <Col xs={12} sm={12} md={12} lg={12}>
           <form horizontal onSubmit={this.submitForm}>
             <FormGroup controlId="formHorizontalName">
               <Col xs={12} sm={12} md={12} lg={12}>
-                <FormControl type="text" placeholder="Name" value={this.state.name} onChange={(e)=>this.setState({ name: e.target.value })} autoFocus required/>
+                <FormControl
+                  type="text"
+                  placeholder="Name"
+                  value={this.state.name}
+                  onChange={({ target }) => this.setState({ name: target.value })}
+                  autoFocus 
+                  required
+                />
               </Col>
               <FormControl.Feedback />
-              {/* <HelpBlock>Validation is based on string length.</HelpBlock> */}
             </FormGroup>
 
             <FormGroup controlId="formHorizontalEmail">
               
               <Col xs={12} sm={12} md={12} lg={12}>
-                <FormControl type="email" placeholder="Email" value={this.state.email} onChange={(e)=>this.setState({ email: e.target.value })} required/>
+                <FormControl
+                  type="email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={({ target }) => this.setState({ email: target.value })}
+                  required
+                />
               </Col>
               <FormControl.Feedback />
             </FormGroup>
 
             <FormGroup controlId="formHorizontalTextarea">
               <Col xs={12} sm={12} md={12} lg={12} >
-                <FormControl componentClass="textarea" placeholder="Message"  value={this.state.message} onChange={(e)=>this.setState({ message: e.target.value })} required className='message-box'/>
+                <FormControl
+                  componentClass="textarea"
+                  placeholder="Message"
+                  value={this.state.message}
+                  onChange={({ target }) => this.setState({ message: target.value })}
+                  required
+                  className='message-box'
+                />
               </Col>
             </FormGroup>
 
@@ -113,13 +135,11 @@ class Contact extends Component{
                 <Button type="submit" bsSize='large' bsStyle='primary' className='btn btn-lg btn-warning'>Submit</Button>
               </Col>
             </FormGroup>
-          
           </form>
         </Col>
-      </Row>
+      </Row> */}
     </Grid>
   );
-
 
   render() {
     const { isSent } = this.state;
